@@ -1,0 +1,19 @@
+# Add `~/bin` to the `$PATH`
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export GOPATH="$HOME/SDK/go";
+
+export ANT_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
+
+PATH="/opt/local/bin:$HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/SDK/dart/dart-sdk/bin:/usr/local/go/bin:/usr/sbin:$GOPATH/bin:/opt/subversion/bin:$HOME/local/node-v0.10.32/bin:$HOME/local/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/local/sbin:$PATH"
+export PATH="$PATH:/Applications/Xcode6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin"
+alias swift="xcrun -sdk macosx swift"
+# export MANPATH="/usr/local/man:$MANPATH"
+export LD_LIBRARY_PATH="/opt/local/lib:/usr/local/lib:/usr/lib"
+for i in /usr/local/*; do
+  [ -d $i/bin ] && PATH="${i}/bin:${PATH}"
+  [ -d $i/sbin ] && PATH="${i}/sbin:${PATH}"
+  [ -d $i/include ] && CPATH="${i}/include:${CPATH}"
+  [ -d $i/lib ] && LD_LIBRARY_PATH="${i}/lib:${LD_LIBRARY_PATH}"
+  [ -d $i/lib/pkgconfig ] && PKG_CONFIG_PATH="${i}/lib/pkgconfig:${PKG_CONFIG_PATH}"
+  [ -d $i/share/man ] && MANPATH="${i}/share/man:${MANPATH}"
+done
