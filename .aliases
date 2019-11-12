@@ -12,8 +12,7 @@ alias dc="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
-alias poc="cd ~/Projects/POC"
-alias sch="cd ~/Projects/Schneider"
+alias qd="cd ~/Projects/QueueDr/queuedr"
 
 alias cl="clear"
 
@@ -142,10 +141,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+alias serve="browser-sync start --server --files ."
 
-alias vi='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias gvi='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias python=python3
+alias pip=pip3
 
-# alias to nw
-alias nw="/Applications/nwjs.app/Contents/MacOS/nwjs"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
