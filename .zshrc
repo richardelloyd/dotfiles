@@ -195,10 +195,6 @@ export MAVEN_HOME="/opt/maven"
 export PATH="$PATH:/usr/lib/jvm/oracle_jdk12/bin:/opt/maven/bin"
 export JAVA_HOME="/usr/lib/jvm/oracle_jdk12"
 
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
