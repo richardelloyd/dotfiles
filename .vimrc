@@ -11,48 +11,32 @@ filetype off                  " required
 set encoding=utf-8
 call plug#begin('~/.vim/plugged')
 
-" core plugins
-Plug 'kien/ctrlp.vim'
 
 " vim main plugins
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-
-Plug 'henrik/vim-indexed-search'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-repeat'
+Plug 'kien/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'xolox/vim-session'
-Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'rhysd/clever-f.vim'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'w0rp/ale'
-Plug 'elixir-lang/vim-elixir'
 Plug 'janko-m/vim-test'
-Plug 'scrooloose/nerdtree'
-
-" language vundles
-Plug 'pangloss/vim-javascript'
+Plug 'ryanoasis/vim-devicons'
+Plug 'mattn/emmet-vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
 
 let g:vim_markdown_folding_disabled = 1
 
-Plug 'mattn/emmet-vim'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 autocmd QuickFixCmdPost [^1]* nested cwindow
 autocmd QuickFixCmdPost    1* nested lwindow
-
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -79,7 +63,6 @@ set fileencodings=utf-8
 set backspace=indent,eol,start
 
 "" Tabs. May be overriten by autocmd rules
-set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
