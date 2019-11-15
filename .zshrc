@@ -179,6 +179,11 @@ else
   return 1
 fi
 
+### Set tmux to start automatically
+if command -v tmux &> /dev/null && [ -z "$TMUX"  ]; then
+  tmux attach -t default || tmux new -s default
+fi
+
 ###-end-ng-completion###export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -189,3 +194,12 @@ export M2_HOME="/opt/maven"
 export MAVEN_HOME="/opt/maven"
 export PATH="$PATH:/usr/lib/jvm/oracle_jdk12/bin:/opt/maven/bin"
 export JAVA_HOME="/usr/lib/jvm/oracle_jdk12"
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export EDITOR='vim'
